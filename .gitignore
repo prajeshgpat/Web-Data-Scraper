@@ -68,3 +68,4 @@ node_modules/
 #Folder
 output
 .vscode
+.gitignore
