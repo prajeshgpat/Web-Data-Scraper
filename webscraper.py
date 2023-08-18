@@ -6,7 +6,7 @@ import os
 NUM_OF_ZIPCODES = 10
 INDEX = "index.txt"
 USZIPS = "uszips.txt"
-UNFILTERED_LAT_LNGS = "lat_lngs_unfiltered.csv"
+UNFILTERED_LAT_LNGS = "./input/lat_lngs_unfiltered.csv"
 FILTERED_LAT_LNGS = "heatmapdata.csv"
 
 # Unit Tests
@@ -110,8 +110,10 @@ def create_csv_data(all_lat_lngs):
         if location[0] < -40 and location[1] > 0:
             count += 1
             heatmapdata = (
-                "new "
-                + "google.maps.LatLng("
+                # "new "
+                # + "google.maps.LatLng("
+                # +
+                "("
                 + str(location[1])
                 + ", "
                 + str(location[0])
